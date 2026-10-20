@@ -1,0 +1,163 @@
+/* ===== Biến màu và cỡ chữ dùng chung ===== */
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1b2437;
+  --muted: #5c6578;
+  --border: #e1e6f0;
+  --primary: #e6321f;      /* nút mua hàng */
+  --primary-dark: #c52615;
+  --sale: #d12a1a;         /* giá khuyến mãi */
+  --tag-bg: #fde8e5;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ===== Khung trang ===== */
+.page-header, main, .page-footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.page-header { padding-top: 20px; padding-bottom: 8px; }
+.page-header h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.page-note { margin: 0; color: var(--muted); font-size: 0.875rem; }
+.page-footer { padding-top: 24px; padding-bottom: 32px; color: var(--muted); font-size: 0.8125rem; }
+
+/* ===== Lưới sản phẩm: 1 cột (điện thoại) -> 2 cột -> 3 cột ===== */
+.product-grid {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* ===== Thẻ sản phẩm: mặc định là bố cục ngang cho điện thoại ===== */
+.card {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 12px;
+  padding: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.card__media {
+  position: relative;
+  align-self: start;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eef1f7;
+}
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.card__title { margin: 0; font-size: 0.95rem; font-weight: 600; line-height: 1.3; }
+
+/* ===== Hiển thị giá ===== */
+.price { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.price__from { font-size: 0.8125rem; color: var(--muted); }
+.price__now { font-size: 1.125rem; font-weight: 700; }
+.price__now--sale { color: var(--sale); }
+.price__old { font-size: 0.8125rem; color: var(--muted); text-decoration: line-through; }
+
+/* Nhãn giảm giá nằm trên ảnh (khi chỉ có 1 mức giá) */
+.badge {
+  position: absolute;
+  top: 6px; left: 6px;
+  padding: 2px 8px;
+  background: var(--sale);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+/* ===== Danh sách lựa chọn: nhãn giảm giá đi kèm đúng loại ===== */
+.options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8125rem;
+}
+.options li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  padding: 4px 8px;
+  background: #f6f8fc;
+  border-radius: 8px;
+}
+.options__name { min-width: 3.2em; color: var(--muted); }
+.options__price { font-weight: 600; }
+.tag {
+  padding: 1px 8px;
+  background: var(--tag-bg);
+  color: var(--sale);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+/* ===== Nút ===== */
+.btn {
+  margin-top: auto;           /* luôn nằm cuối thẻ để các thẻ thẳng hàng */
+  min-height: 40px;           /* đủ lớn để chạm bằng ngón tay */
+  padding: 8px 12px;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+.btn--outline { background: #fff; color: var(--primary); }
+.btn--outline:hover { background: var(--tag-bg); color: var(--primary-dark); }
+.btn:focus-visible { outline: 3px solid #1b66d6; outline-offset: 2px; }
+
+/* ===== Máy tính bảng: thẻ xếp dọc, 2 cột ===== */
+@media (min-width: 600px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { display: flex; flex-direction: column; gap: 12px; padding: 12px; }
+  .card__media { aspect-ratio: 4 / 3; }
+  .card__title { font-size: 1rem; }
+  .card__body { flex: 1; }
+}
+
+/* ===== Máy tính: 3 cột ===== */
+@media (min-width: 960px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}
