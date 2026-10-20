@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thẻ sản phẩm cải tiến – mô phỏng Pet Mart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Đồ dùng cho chó mèo</h1>
+    <p class="page-note">Trang mô phỏng thẻ sản phẩm cải tiến cho bài tập. Dữ liệu và hình ảnh là mẫu tự tạo.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="list-title">
+      <h2 id="list-title" class="visually-hidden">Danh sách sản phẩm</h2>
+
+      <ul class="product-grid">
+
+        <!-- 1. Có 2 lựa chọn, giảm giá chỉ ở loại 6 túi -->
+        <li>
+          <article class="card">
+            <div class="card__media">
+              <img src="images/cat-litter.svg" alt="Túi cát vệ sinh cho mèo" width="400" height="300">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Cát vệ sinh cho mèo bột gỗ đất sét</h3>
+              <p class="price"><span class="price__from">Từ</span> <span class="price__now">170.000₫</span></p>
+              <ul class="options">
+                <li><span class="options__name">1 túi</span><span class="options__price">170.000₫</span></li>
+                <li>
+                  <span class="options__name">6 túi</span>
+                  <span class="options__price">850.000₫</span>
+                  <del class="price__old">1.020.000₫</del>
+                  <span class="tag">Giảm 17%</span>
+                </li>
+              </ul>
+              <button type="button" class="btn btn--outline">Chọn tùy chọn</button>
+            </div>
+          </article>
+        </li>
+
+        <!-- 2. Có 2 lựa chọn, giảm giá chỉ ở loại 7 gói -->
+        <li>
+          <article class="card">
+            <div class="card__media">
+              <img src="images/bone-treat.svg" alt="Xương gặm sạch răng cho chó" width="400" height="300">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Xương gặm sạch răng cho chó</h3>
+              <p class="price"><span class="price__from">Từ</span> <span class="price__now">10.000₫</span></p>
+              <ul class="options">
+                <li><span class="options__name">1 gói</span><span class="options__price">10.000₫</span></li>
+                <li>
+                  <span class="options__name">7 gói</span>
+                  <span class="options__price">60.000₫</span>
+                  <del class="price__old">70.000₫</del>
+                  <span class="tag">Giảm 14%</span>
+                </li>
+              </ul>
+              <button type="button" class="btn btn--outline">Chọn tùy chọn</button>
+            </div>
+          </article>
+        </li>
+
+        <!-- 3. Một mức giá, có giảm giá -->
+        <li>
+          <article class="card">
+            <div class="card__media">
+              <img src="images/cat-pate.svg" alt="Pate cho mèo vị cá ngừ" width="400" height="300">
+              <span class="badge">-14%</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Pate cho mèo vị cá ngừ</h3>
+              <p class="price">
+                <span class="price__now price__now--sale">25.000₫</span>
+                <del class="price__old">29.000₫</del>
+              </p>
+              <button type="button" class="btn">Thêm vào giỏ</button>
+            </div>
+          </article>
+        </li>
+
+        <!-- 4. Một mức giá, không giảm -->
+        <li>
+          <article class="card">
+            <div class="card__media">
+              <img src="images/dog-food.svg" alt="Túi hạt cho chó con" width="400" height="300">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Hạt cho chó con giống nhỏ</h3>
+              <p class="price"><span class="price__now">225.000₫</span></p>
+              <button type="button" class="btn">Thêm vào giỏ</button>
+            </div>
+          </article>
+        </li>
+
+        <!-- 5. Một mức giá, có giảm giá -->
+        <li>
+          <article class="card">
+            <div class="card__media">
+              <img src="images/leash.svg" alt="Dây dắt chó màu đỏ" width="400" height="300">
+              <span class="badge">-20%</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Dây dắt chó phản quang</h3>
+              <p class="price">
+                <span class="price__now price__now--sale">100.000₫</span>
+                <del class="price__old">125.000₫</del>
+              </p>
+              <button type="button" class="btn">Thêm vào giỏ</button>
+            </div>
+          </article>
+        </li>
+
+        <!-- 6. Một mức giá, không giảm -->
+        <li>
+          <article class="card">
+            <div class="card__media">
+              <img src="images/shampoo.svg" alt="Chai sữa tắm cho chó mèo" width="400" height="300">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Sữa tắm dịu nhẹ cho chó mèo</h3>
+              <p class="price"><span class="price__now">85.000₫</span></p>
+              <button type="button" class="btn">Thêm vào giỏ</button>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Bài tập Chương 1 – Phát triển ứng dụng WEB/TMĐT. Website tham khảo: Pet Mart (petmart.vn). Hình ảnh tự vẽ, không dùng ảnh của website tham khảo.</p>
+  </footer>
+</body>
+</html>
