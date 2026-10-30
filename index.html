@@ -3,16 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thẻ sản phẩm cải tiến – mô phỏng Pet Mart</title>
+  <title>Pet Nhà Mình – Đồ dùng cho chó mèo</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-header">
-    <h1>Đồ dùng cho chó mèo</h1>
-    <p class="page-note">Trang mô phỏng thẻ sản phẩm cải tiến cho bài tập. Dữ liệu và hình ảnh là mẫu tự tạo.</p>
+  <a class="skip-link" href="#noi-dung">Bỏ qua menu, tới danh sách sản phẩm</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <p>Giao nội thành trong 2 giờ · Miễn phí từ 299.000₫</p>
+        <p>Hotline: <a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></p>
+      </div>
+    </div>
+
+    <div class="container header-main">
+      <a class="brand" href="#">
+        <img src="images/logo.svg" alt="" width="44" height="44">
+        <span class="brand__text">
+          <span class="brand__name">Pet Nhà Mình</span>
+          <span class="brand__tagline">Cửa hàng thú cưng</span>
+        </span>
+      </a>
+
+      <form class="search" role="search" action="#">
+        <label class="visually-hidden" for="q">Tìm sản phẩm</label>
+        <input id="q" name="q" type="search" placeholder="Tìm thức ăn, cát vệ sinh, phụ kiện...">
+        <button type="submit" class="btn search__btn">Tìm</button>
+      </form>
+
+      <a class="cart" href="#">Giỏ hàng <span class="cart__count">0</span></a>
+    </div>
+
+    <nav class="main-nav" aria-label="Menu chính">
+      <ul class="container menu">
+        <li><a href="#" aria-current="page">Trang chủ</a></li>
+        <li><a href="#">Chó</a></li>
+        <li><a href="#">Mèo</a></li>
+        <li><a href="#">Phụ kiện</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
+  <main id="noi-dung" class="container">
+    <nav class="breadcrumb" aria-label="Đường dẫn">
+      <ol>
+        <li><a href="#">Trang chủ</a></li>
+        <li aria-current="page">Đồ dùng cho chó mèo</li>
+      </ol>
+    </nav>
+
+    <div class="page-title">
+      <h1>Đồ dùng cho chó mèo</h1>
+      <p class="page-title__count">6 sản phẩm</p>
+    </div>
+
     <section aria-labelledby="list-title">
       <h2 id="list-title" class="visually-hidden">Danh sách sản phẩm</h2>
 
@@ -25,7 +72,7 @@
               <img src="images/cat-litter.svg" alt="Túi cát vệ sinh cho mèo" width="400" height="300">
             </div>
             <div class="card__body">
-              <h3 class="card__title">Cát vệ sinh cho mèo bột gỗ đất sét</h3>
+              <h3 class="card__title"><a href="#">Cát vệ sinh cho mèo bột gỗ đất sét</a></h3>
               <p class="price"><span class="price__from">Từ</span> <span class="price__now">170.000₫</span></p>
               <ul class="options">
                 <li><span class="options__name">1 túi</span><span class="options__price">170.000₫</span></li>
@@ -48,7 +95,7 @@
               <img src="images/bone-treat.svg" alt="Xương gặm sạch răng cho chó" width="400" height="300">
             </div>
             <div class="card__body">
-              <h3 class="card__title">Xương gặm sạch răng cho chó</h3>
+              <h3 class="card__title"><a href="#">Xương gặm sạch răng cho chó</a></h3>
               <p class="price"><span class="price__from">Từ</span> <span class="price__now">10.000₫</span></p>
               <ul class="options">
                 <li><span class="options__name">1 gói</span><span class="options__price">10.000₫</span></li>
@@ -72,7 +119,7 @@
               <span class="badge">-14%</span>
             </div>
             <div class="card__body">
-              <h3 class="card__title">Pate cho mèo vị cá ngừ</h3>
+              <h3 class="card__title"><a href="#">Pate cho mèo vị cá ngừ</a></h3>
               <p class="price">
                 <span class="price__now price__now--sale">25.000₫</span>
                 <del class="price__old">29.000₫</del>
@@ -89,7 +136,7 @@
               <img src="images/dog-food.svg" alt="Túi hạt cho chó con" width="400" height="300">
             </div>
             <div class="card__body">
-              <h3 class="card__title">Hạt cho chó con giống nhỏ</h3>
+              <h3 class="card__title"><a href="#">Hạt cho chó con giống nhỏ</a></h3>
               <p class="price"><span class="price__now">225.000₫</span></p>
               <button type="button" class="btn">Thêm vào giỏ</button>
             </div>
@@ -104,7 +151,7 @@
               <span class="badge">-20%</span>
             </div>
             <div class="card__body">
-              <h3 class="card__title">Dây dắt chó phản quang</h3>
+              <h3 class="card__title"><a href="#">Dây dắt chó phản quang</a></h3>
               <p class="price">
                 <span class="price__now price__now--sale">100.000₫</span>
                 <del class="price__old">125.000₫</del>
@@ -121,7 +168,7 @@
               <img src="images/shampoo.svg" alt="Chai sữa tắm cho chó mèo" width="400" height="300">
             </div>
             <div class="card__body">
-              <h3 class="card__title">Sữa tắm dịu nhẹ cho chó mèo</h3>
+              <h3 class="card__title"><a href="#">Sữa tắm dịu nhẹ cho chó mèo</a></h3>
               <p class="price"><span class="price__now">85.000₫</span></p>
               <button type="button" class="btn">Thêm vào giỏ</button>
             </div>
@@ -132,8 +179,33 @@
     </section>
   </main>
 
-  <footer class="page-footer">
-    <p>Bài tập Chương 1 – Phát triển ứng dụng WEB/TMĐT. Website tham khảo: Pet Mart (petmart.vn). Hình ảnh tự vẽ, không dùng ảnh của website tham khảo.</p>
+  <footer class="site-footer">
+    <div class="container footer-cols">
+      <section>
+        <h2>Pet Nhà Mình</h2>
+        <p>Thức ăn, cát vệ sinh và phụ kiện cho chó mèo, chọn lọc từ các thương hiệu quen thuộc.</p>
+      </section>
+      <section>
+        <h2>Hỗ trợ khách hàng</h2>
+        <ul>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Phí và thời gian giao hàng</a></li>
+          <li><a href="#">Hướng dẫn đặt hàng</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Liên hệ</h2>
+        <address>
+          123 Đường Mẫu, Quận 1, TP. Hồ Chí Minh<br>
+          Hotline: <a href="tel:0900000000">0900&nbsp;000&nbsp;000</a><br>
+          Email: <a href="mailto:hello@petnhaminh.example">hello@petnhaminh.example</a><br>
+          Mở cửa: 8:00 – 21:00 mỗi ngày
+        </address>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <p class="container">© 2026 Pet Nhà Mình. Website mô phỏng cho bài tập Phát triển ứng dụng WEB/TMĐT, tên cửa hàng và thông tin liên hệ là dữ liệu mẫu.</p>
+    </div>
   </footer>
 </body>
 </html>
