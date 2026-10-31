@@ -7,7 +7,7 @@ Repository này lưu hai bài tập cá nhân liên tiếp của học phần *P
 ## 1. Tổng quan
 
 | Bài tập | Nội dung chính | 
-|---|---|---|
+|---|---|
 | Buổi 1 (Chương 1) | Khảo sát Pet Mart, phân tích vấn đề thẻ sản phẩm, xây dựng thẻ sản phẩm cải tiến bằng HTML5 và CSS3 | 
 | Buổi 2 (Chương 2) | Củng cố HTML5 ngữ nghĩa, chuẩn hóa CSS, Box Model, Flexbox, CSS Grid, hover/focus, kiểm thử và tự sửa lỗi | 
 
